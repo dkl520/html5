@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		  <style>
+    #list {
+      list-style: none;
+    }
+    #list span {
+      display: inline-block;
+      width: 80px;
+      text-align: right;
+      margin-right: 20px;
+    }
+  </style>
+	</head>
+	<body>
+		<h3>我的生词本--生词测验</h3>
+		<hr />
+		<ul id="list">
+		</ul>
+		<input type="button" value="提交答案，查看结果" id="btSubmit" />
+		<script type="text/javascript">
+			var html="";
+	       for(var i=0;i<localStorage.length;i++){
+	       	    var  k= localStorage.key(i);
+	       	    html+=` <li><span>${k}</span><input></li>`
+	       }
+	       list.innerHTML=html;
+	       btSubmit.onclick=function(){
+	       	  var totalCount=localStorage.length;
+	       	  var  correntCount=0;
+	       	  var inputList =list.querySelectorAll('input');
+	       	  for (var i=0;i<inputList.length;i++) {
+	       	  	 var userInput =inputList[i].value;
+	       	  	 var en=localStorage.key(i);
+	       	  	 var zh=localStorage[en];
+	       	  	 if (userInput==zh) {
+	       	  	 	correntCount++;
+	       	  	 }
+	       	  }
+	       	  sessionStorage['TotalCount']=totalCount;
+	       	  sessionStorage["CorrectCount"]=correntCount;
+	       	  location.href="5.html";
+	       	 }
+		</script>
+		
+	</body>
+</html>

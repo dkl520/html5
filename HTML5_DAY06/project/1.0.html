@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>飞机选择</h3>
+		<div id="chosen">
+			<img src="img/p0.png" id="p0"/>
+		</div>
+		<hr />
+		<div id="list">
+			<img src="img/p3.png" alt="" />
+			<img src="img/p4.png" alt="" />
+			<img src="img/p5.png" alt="" />
+		</div>
+		<script type="text/javascript">
+			var planes=list.querySelector('img');
+			  for (var i=0;i<planes.length;i++) {
+			  	   var p=planes[i];
+			  	   p.ondragstart = function(e){
+			  	   	  e.dataTransfer.setData("PlaneID",this,id);
+			  }
+			  	   }
+			  chosen.ondrageover=function(e){
+			  	e.preventDefault();
+			  }
+			  chosen.ondrop=function(e){
+			  	p0.style.display="none";
+			  	if(chosen.children.length>1){
+			  		list.appendChild(p0.nextElementSibling);
+			  	}
+			  	var pid=e.dataTransfer.getData("PlaneID")
+			  	var p=document.getElementById(pid);
+			  	chosen.appendChild(p);
+			  	p0.style.display="block";
+			  }
+			  
+		</script>
+	</body>
+</html>

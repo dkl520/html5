@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+    body {
+      text-align: center;
+    }
+    svg {
+      background: #f0f0f0;
+    }
+  </style>
+	</head>
+	<body>
+	   <h3>高斯滤镜</h3>
+	   <svg id="s1" width="600" height="400" opacity="0">
+	   		<defs>
+	   			<filter id='f3'>
+	   			   <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+	   			</filter>
+	   			<filter id='f6'>
+	   			   <feGaussianBlur stdDeviation="6"></feGaussianBlur>
+	   			</filter>
+	   		</defs>
+	   		<!--<text x="50" y="100" font-size="70">达内科技® 2016</text>-->
+	   	    <!--<img src="img/wallhaven-478520.jpg"  filter="url(#f6)" x="50" y="100" width="300" />-->
+	   </svg>
+	</body>
+</html>

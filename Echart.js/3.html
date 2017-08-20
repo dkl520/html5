@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    myChart.setOption({
+        title: {
+            text: '异步加载实例'
+        },
+        legend: {
+            data: ['销量']
+        },
+        xAxis: {
+            data: []
+        },
+        series: {
+            [
+                name: '销量',
+                type: 'bar',
+                data: []
+            ]
+        }
+
+    })
+    $.ajax({
+            url: '3.php',
+            type: 'json'
+        });
+        .done(function(data) {
+            myChart.setOption({
+                xAxis: {
+                    data: data.categories
+                },
+                series: [{
+                    name: '销量',
+                    data: data.data
+
+                }]
+            })
+
+        });
+        .fail(function() {
+            console.log("error");
+        });
+        .always(function() {
+            console.log("complete");
+        });
+    </script>
+    <script src="echarts.js"></script>
+    <script src='vintage.js'></script>
+    <script src='jquery-2.1.3.js'></script>
+</body>
+
+</html>

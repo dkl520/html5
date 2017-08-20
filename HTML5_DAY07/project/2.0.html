@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+    .blue {  background: #ccf; color: #33f;  }
+    .pink {  background: #fae; color: #918;	 }
+    .dark {  background: #111; color: #eee;  }
+  </style>
+	</head>
+	
+	<body>
+		<h3>用户中心</h3>
+  <hr/>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias consequatur, ea, eos error eveniet exercitationem minus nihil obcaecati optio quia saepe suscipit vitae. Earum maxime nesciunt officiis perferendis quisquam!</p>
+  <hr/>
+  <a href="1.0.html">跳转回首页</a>
+  <script type="text/javascript">
+  	  var theme=localStorage['UserTheme'];
+  	  document.body.className=theme;
+  	  window.onstorage=function(){
+  	  	 console.log('localstorage改变了');
+  	  	 var theme=localStorage['UserTheme'];
+  	  	 document.body.className=theme;
+  	  }
+  </script>
+  
+	</body>
+</html>

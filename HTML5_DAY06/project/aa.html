@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+body {
+    text-align: center;
+}
+
+#choose {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    width: 220px;
+    margin: 0 auto;
+}
+
+#list {
+    background: #f0f0f0;
+    min-height: 200px;
+    padding: 10px;
+}
+</style>
+
+<body>
+    <h3>homekwork</h3>
+    <div id="chosen">
+        <img src="img/p0.png" id="p0">
+    </div>
+    <hr/>
+    <div id="list">
+        <img src="img/p3.png"  id="p3">
+        <img src="img/p4.png"  id="p4">
+        <img src="img/p5.png"  id="p5">
+    </div>
+    <script>
+     //拖动源对象
+    var planes = list.querySelectorAll('img');
+    for (var i = 0; i < planes.length; i++) {
+        var p = planes[i];
+          p.ondragstart = function(e) {
+        	//记录拖动的源对象的ID 传递给目标对象上的事件
+            e.dataTransfer.setData('PlaneID', this.id);
+        }
+        p.ondrag = function() {}
+        p.ondragend = function() {}
+    }
+      // 释放的目标对象 
+    chosen.ondragenter = function() {}
+    chosen.ondragover = function(e) {
+        e.preventDefault();
+    }
+    chosen.ondragleave = function() {}
+    chosen.ondrop = function(e) {
+        p0.style.display = 'none';
+          // 检查除了p0外是否还有其他的飞机
+        if (chosen.children.length > 1) {
+        	//吧p0的兄弟移到下方列表中
+            list.appendChild(p0.nextElementSibling);
+        }
+        //拖动的小飞机在chosen 上方释放
+        var pid = e.dataTransfer.getData('PlaneID');
+        var p = document.getElementById(pid);
+        chosen.appendChild(p);
+    }
+     list.ondragenter = function(){}
+     list.ondragover = function(e){
+      e.preventDefault();
+     }     
+    list.ondragleave = function(){}
+    list.ondrop = function(e){
+      //把被拖动的飞机放到列表中
+      var pid = e.dataTransfer.getData('PlaneID');
+      var p = document.getElementById(pid);
+      list.appendChild(p);
+
+      //显示出隐藏的p0
+      p0.style.display = 'block';
+    }
+          
+    </script>
+</body>
+
+</html>

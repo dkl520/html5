@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<h3>订单生成成功！</h3>
+<p>订单编号：<span id="oid"></span></p>
+<p>点击 <a href="usercenter.html">此处</a>，可以查看您的所有订单。</p>
+
+<script>
+  oid.innerHTML = sessionStorage['OrderId'];
+  sessionStorage.removeItem('OrderId');
+</script>
+</body>
+</html>

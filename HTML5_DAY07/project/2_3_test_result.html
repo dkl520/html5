@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h3>我的单词本 —— 测验成绩单</h3>
+  <hr/>
+  <div id="result"></div>
+  <hr/>
+  <a href="2_1_word_save.html">添加生词</a>
+  <a href="2_2_word_test.html">新的测试</a>
+  <script>
+    result.innerHTML = `
+      <p>总词汇量：${sessionStorage['TotalCount']}</p>
+      <p>正确数量：${sessionStorage['CorrectCount']}</p>
+      <p>正确率率：${sessionStorage['CorrectCount']/sessionStorage['TotalCount']*100+'%'}</p>
+    `;
+  </script>
+</body>
+</html>

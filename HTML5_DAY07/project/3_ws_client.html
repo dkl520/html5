@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h3>使用HTML5+WebSocket创建WS协议的客户端</h3>
+  <button id="btConnect">1-连接到服务器</button>
+  <button id="btSendReceive">2-向服务器发送并接收消息</button>
+  <button id="btClose">3-断开到服务器的连接</button>
+  <script>
+    //1-使用WS协议连接到服务器
+    var wsClient = null;
+    btConnect.onclick = function(){
+      wsClient = new WebSocket('ws://127.0.0.1:9999');
+      wsClient.onopen = function(){
+        console.log('WS客户端已经连接到WS服务器')
+      }
+    }
+
+    //2-向WS服务器发送消息并接收消息
+    btSendReceive.onclick = function(){
+      wsClient.send('Hello'); //向服务器发送消息
+      wsClient.onmessage = function(e){
+        console.log('客户端接收到服务器的消息：')
+        console.log(e.data);
+      }
+    }
+
+    //3-断开到服务器的连接
+    btClose.onclick = function(){
+      wsClient.close();  //关闭到服务器的连接
+      wsClient.onclose = function(){
+        console.log('WS客户端断开了到WS服务器的连接')
+      }
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>我的单词本--添加生词</h3>
+		<hr />
+		<label for="en">英文</label>
+		<input type="text" id="en" /><br />
+		<label for="zh">中文</label>
+		<input type="text" id="zh" /><br />
+		<input type="button"id="btSave" value="保存单词" />
+		<a href="4.html">开始测试</a>
+		<script type="text/javascript">
+			document.getElementById("btSave").onclick=function(){
+				 var e=en.value;
+				 var z=zh.value;
+				 localStorage[e]=z;
+				 alert('保存成功');
+				 en.value="";
+				 zh.value="";
+				 
+			}
+		</script>
+		
+	</body>
+</html>

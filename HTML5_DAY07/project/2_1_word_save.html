@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h3>我的单词本 —— 添加生词</h3>
+  <hr/>
+  <label for="en">英文：</label>
+  <input id="en"><br>
+  <label for="zh">中文：</label>
+  <input id="zh"><br>
+  <input type="button" value="保存生词" id="btSave">
+  <hr/>
+  <a href="2_2_word_test.html">开始测试</a>
+  <script>
+    btSave.onclick = function(){
+      var e = en.value;
+      var z = zh.value;
+      //以K-V形式永久保存在客户端
+      localStorage[e] = z;
+
+      alert('保存成功！')
+      en.value = '';
+      zh.value = '';
+    }
+  </script>
+</body>
+</html>

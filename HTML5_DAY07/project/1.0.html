@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.blue{ background: #ccf; color: #33f;}
+			.pink{ background: #fae; color: #918;}
+			.dark{ background: #111; color: #eee;}
+			
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var theme =localStorage['UserTheme'];
+			if (theme) {
+				  document.body.className=theme;
+			}
+			
+		</script>
+		<h3>首页</h3>
+		<select name="" id="selectTheme">
+			<option value="0">--请选择你喜欢的主题</option>
+			<option value="pink">粉色</option>
+			<option value="dark">黑色</option>
+			<option value="blue">蓝色</option>
+		</select>
+		<hr>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit aperiam tenetur eveniet sit ex libero repellat molestiae vel autem laudantium corporis perferendis eligendi ipsam est facilis repellendus. Aspernatur similique.</p>
+		<a href="2.0.html">跳转页面</a>
+		<script type="text/javascript">
+		selectTheme.onchange=function(){
+			var theme=this.value;
+			document.body.className=theme;
+			localStorage['UserTheme']=theme;
+		}
+		</script>
+		
+	</body>
+</html>

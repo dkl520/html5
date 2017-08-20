@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+    body {
+      text-align: center;
+    }
+    #chosen {
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      padding: 10px;
+      width: 220px;
+      margin: 0 auto;
+    }
+    #list {
+      background: #f0f0f0;
+      min-height: 200px;
+      padding: 10px;
+    }
+  </style>
+	</head>
+	<body>
+		 <h3>作业——英雄选择</h3>
+  <div id="chosen">
+    <img id="p0" src="img/p0.png">
+  </div>
+  <hr/>
+  <div id="list">
+    <img id="p3" src="img/p3.png">
+    <img id="p4" src="img/p4.png">
+    <img id="p5" src="img/p5.png">
+  </div>
+  <button id="btn">移动</button>
+  <script type="text/javascript">
+	       btn.onclick=function(){
+        var planes=list.querySelectorAll("img")
+	       	
+	   	   if(chosen.children.length>1){
+	   	   	  list.append(p0.nextElementSibling);
+	   	   }
+	   	   p0.style.display="none";
+	   	   chosen.appendChild(planes[0]);
+    	   }
+</script>
+  
+   <!--<script type="text/javascript">
+   	var a = [];
+      for (let i = 0; i < 10; i++) { 
+          btn.onclick = function () { 
+              console.log(i); 
+           }; }
+
+   </script>-->
+	</body>
+</html>

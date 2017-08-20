@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/jd.css">
+  <link rel="stylesheet" href="css/usercenter.css">
+  <title>用户中心 — 京东商城</title>
+</head>
+<body>
+  <div id="header"></div>
+  <div id="main">
+    <div class="affix">
+      <h3>用户中心</h3>
+      <ul>
+        <li class="active"><a href="#container-my-order">我的订单</a></li>
+        <li><a href="#container-buy-stat-canvas">消费统计(Canvas)</a></li>
+        <li><a href="#container-buy-stat-svg">消费统计(SVG)</a></li>
+        <li><a href="#container-luck-lottery">幸运抽奖</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <div id="container-my-order" class="active">
+        <table id="table-order">
+          <thead>
+          <tr>
+            <th>订单信息</th>
+            <th>收货人</th>
+            <th>订单金额</th>
+            <th>
+              <select id="selectOrderTime">
+                <option value="m1">最近一个月</option>
+                <option value="m3">最近三个月</option>
+                <option value="m6">最近六个月</option>
+              </select>
+            </th>
+            <th>
+              <select id="selectStatus">
+                <option value="0">所有状态</option>
+                <option value="1">配货中</option>
+                <option value="2">运输中</option>
+                <option value="3">已签收</option>
+                <option value="4">已删除</option>
+              </select>
+            </th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!--<tr>
+            <td colspan="6">订单编号：92341761231</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#"><img src="images/phone/phone_01.jpg"></a>
+              <a href="#"><img src="images/phone/phone_02.jpg"></a>
+              <a href="#"><img src="images/phone/phone_03.jpg"></a>
+            </td>
+            <td>强东妈</td>
+            <td>￥3599.00<br>在线支付</td>
+            <td>2016-10-25<br>22:13:11</td>
+            <td>配货中</td>
+            <td>
+              <a href="#">查看</a><br>
+              <a href="#">晒单</a>
+              <a href="#">评价</a><br>
+              <a href="#">还要买</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6">订单编号：92341761231</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#"><img src="images/phone/phone_01.jpg"></a>
+              <a href="#"><img src="images/phone/phone_02.jpg"></a>
+              <a href="#"><img src="images/phone/phone_03.jpg"></a>
+            </td>
+            <td>强东妈</td>
+            <td>￥3599.00<br>在线支付</td>
+            <td>2016-10-25<br>22:13:11</td>
+            <td>配货中</td>
+            <td>
+              <a href="#">查看</a><br>
+              <a href="#">晒单</a>
+              <a href="#">评价</a><br>
+              <a href="#">还要买</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6">订单编号：92341761231</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#"><img src="images/phone/phone_01.jpg"></a>
+              <a href="#"><img src="images/phone/phone_02.jpg"></a>
+              <a href="#"><img src="images/phone/phone_03.jpg"></a>
+            </td>
+            <td>强东妈</td>
+            <td>￥3599.00<br>在线支付</td>
+            <td>2016-10-25<br>22:13:11</td>
+            <td>配货中</td>
+            <td>
+              <a href="#">查看</a><br>
+              <a href="#">晒单</a>
+              <a href="#">评价</a><br>
+              <a href="#">还要买</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6">订单编号：92341761231</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#"><img src="images/phone/phone_01.jpg"></a>
+              <a href="#"><img src="images/phone/phone_02.jpg"></a>
+              <a href="#"><img src="images/phone/phone_03.jpg"></a>
+            </td>
+            <td>强东妈</td>
+            <td>￥3599.00<br>在线支付</td>
+            <td>2016-10-25<br>22:13:11</td>
+            <td>配货中</td>
+            <td>
+              <a href="#">查看</a><br>
+              <a href="#">晒单</a>
+              <a href="#">评价</a><br>
+              <a href="#">还要买</a><br>
+            </td>
+          </tr>-->
+          </tbody>
+        </table>
+      </div>
+      <div id="container-buy-stat-canvas">消费统计1</div>
+      <div id="container-buy-stat-svg">消费统计2</div>
+      <div id="container-luck-lottery">
+        <button id="bt-lottery" disabled>正在加载抽奖统计数据....</button>
+        <canvas id="canvas-lottery"></canvas>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/fusioncharts.js"></script>
+  <script src="js/fusioncharts.charts.js"></script>
+  <script src="js/usercenter.js"></script>
+</body>
+</html>

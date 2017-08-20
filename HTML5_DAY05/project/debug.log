@@ -1,0 +1,18 @@
+[0202/181517:ERROR:process_reader_win.cc(233)] ReadMemory at 0xf1d0000 of 64 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0202/181517:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\55.0.2883.87\chrome_child.dll
+[0202/181517:ERROR:process_reader_win.cc(233)] ReadMemory at 0xf1d0000 of 64 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0202/181517:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\55.0.2883.87\chrome_child.dll
+[0202/181517:ERROR:process_reader_win.cc(233)] ReadMemory at 0x535000 of 45056 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0202/181517:ERROR:crash_report_exception_handler.cc(112)] WriteEverything failed
+[0202/181517:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: 已尝试访问正在退出的过程。  (0xc000010a)
+[0202/181517:ERROR:process_reader_win.cc(233)] ReadMemory at 0x1f5000 of 45056 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0202/181517:ERROR:crash_report_exception_handler.cc(112)] WriteEverything failed
+[0202/181517:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: 已尝试访问正在退出的过程。  (0xc000010a)
+[0202/181527:ERROR:process_reader_win.cc(142)] SuspendThread: 拒绝访问。 (0x5)
+[0202/181527:ERROR:process_reader_win.cc(142)] SuspendThread: 拒绝访问。 (0x5)
+[0202/181527:ERROR:process_reader_win.cc(142)] SuspendThread: 拒绝访问。 (0x5)
+[0202/181527:ERROR:exception_snapshot_win.cc(87)] thread ID 5468 not found in process
+[0202/181527:WARNING:crash_report_exception_handler.cc(61)] ProcessSnapshotWin::Initialize failed
+[0202/181527:ERROR:process_reader_win.cc(233)] ReadMemory at 0x1335000 of 45056 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0202/181527:ERROR:crash_report_exception_handler.cc(112)] WriteEverything failed
+[0202/181527:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: 已尝试访问正在退出的过程。  (0xc000010a)
